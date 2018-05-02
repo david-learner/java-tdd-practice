@@ -3,7 +3,6 @@ import domain.LottoMachine;
 import domain.ResultView;
 import org.junit.Test;
 
-import javax.xml.transform.Result;
 import java.util.Scanner;
 
 public class LottoMainTest {

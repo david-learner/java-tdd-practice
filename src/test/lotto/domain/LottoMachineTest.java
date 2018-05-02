@@ -10,4 +10,9 @@ public class LottoMachineTest {
     public void calcLottoCount() {
         assertThat(LottoMachine.calcLottoCount(12000),is(12));
     }
+
+    @Test
+    public void randomNoGenerate() {
+        System.out.println(LottoMachine.generateRandomNo());
+    }
 }
