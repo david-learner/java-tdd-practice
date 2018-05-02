@@ -1,7 +1,7 @@
-import domain.InputView;
+import view.InputView;
 import domain.Lotto;
 import domain.LottoMachine;
-import domain.ResultView;
+import view.ResultView;
 import org.junit.Test;
 
 import java.util.List;

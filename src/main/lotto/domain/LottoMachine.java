@@ -29,4 +29,16 @@ public class LottoMachine {
         }
         return lottos;
     }
+
+    public static WinningLotto createWinningLotto(String winningNos) {
+        Set<Integer> numbers = new HashSet<>();
+        for (String number : winningNos.split(",")) {
+            numbers.add(Integer.parseInt(number.trim()));
+        }
+        return null;
+    }
+
+    public static String[] splitDivider(String winningNos) {
+        return winningNos.split(",");
+    }
 }

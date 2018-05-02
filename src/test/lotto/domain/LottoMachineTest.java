@@ -1,11 +1,9 @@
 package domain;
 
 import org.junit.Test;
+import view.InputView;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -32,5 +30,16 @@ public class LottoMachineTest {
     public void getLottos() {
         List<Lotto> lottos = LottoMachine.getLottos(6);
         assertThat(lottos.size(), is(6));
+    }
+
+    @Test
+    public void createWinningLotto() {
+        Scanner scanner = new Scanner("1, 2, 3, 4, 5, 7");
+        WinningLotto winningLotto = LottoMachine.createWinningLotto("1, 2, 3, 4, 5, 7");
+    }
+
+    @Test
+    public void splitDivider() {
+        String[] str = LottoMachine.splitDivider("1, 2, 3, 4, 5, 7");
     }
 }

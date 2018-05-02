@@ -1,5 +1,7 @@
-package domain;
+package view;
 
+import domain.Lotto;
+import domain.LottoMachine;
 import org.junit.Test;
 
 import java.util.List;
