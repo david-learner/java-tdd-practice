@@ -2,8 +2,10 @@ package domain;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -21,8 +23,14 @@ public class LottoMachineTest {
 
     @Test
     public void getLotto() {
-        List<Integer> lotto = LottoMachine.getLotto();
-        assertThat(lotto.size() ,is(6));
-        System.out.println(Arrays.toString(lotto.toArray()));
+        Set<Integer> lottoNos = LottoMachine.getLotto();
+        assertThat(lottoNos.size() ,is(6));
+        System.out.println(Arrays.toString(lottoNos.toArray()));
+    }
+
+    @Test
+    public void getLottos() {
+        List<Lotto> lottos = LottoMachine.getLottos(6);
+        assertThat(lottos.size(), is(6));
     }
 }
