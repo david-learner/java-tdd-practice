@@ -1,5 +1,8 @@
 package domain;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class LottoMachine {
@@ -11,5 +14,13 @@ public class LottoMachine {
 
     public static int generateRandomNo() {
         return ThreadLocalRandom.current().nextInt(1, 46);
+    }
+
+    public static List<Integer> getLotto() {
+        List<Integer> lotto = new ArrayList<>();
+        while (lotto.size() < 6) {
+            lotto.add(generateRandomNo());
+        }
+        return lotto;
     }
 }
